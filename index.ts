@@ -22,7 +22,7 @@ export let varifyHash = (realPassword: string, hashString: string): Promise<bool
     return new Promise((resolve, reject) => {
         bcrypt.compare(realPassword, hashString, function (err, result) {//'result'' will be boolean 
             if (err) {
-                reject(err);//it means hash is invalid
+                resolve(false);//it means hash is invalid
             }
             resolve(result);//return with boolean 'Hash' is matched or not
         });
