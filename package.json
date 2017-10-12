@@ -1,7 +1,7 @@
 {
   "name": "bcrypt-inzi",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "this is simple lib for string to hash and compare string and hash",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,21 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malikasinger1/Bcrypt-inzi.git"
+  },
+  "keywords": [
+    "bcrypt",
+    "hash",
+    "salt",
+    "bcrypt",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/malikasinger1/Bcrypt-inzi/issues"
+  },
+  "homepage": "https://github.com/malikasinger1/Bcrypt-inzi#readme"
 }
