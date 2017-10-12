@@ -1,3 +1,10 @@
+# What is Bcrypt:
+bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher 
+
+it is ideal for convert password into hash when saving in database,  Besides incorporating a salt to protect against **Rainbow table attacks**, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to **brute-force search attacks** even with increasing computation power.
+
+
+
 # Install:
 
 `npm i bcrypt-inzi --save`
