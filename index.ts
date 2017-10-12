@@ -1,8 +1,7 @@
 import * as bcrypt from "bcrypt-nodejs";
 
-export let stringToHash = (PasswordString: string): Promise<string> => {
+export let stringToHash = (PasswordString: string, round = 10): Promise<string> => {
     return new Promise((resolve, reject) => {
-        var round = 10;
 
         bcrypt.genSalt(round, function (err, salt) {
             if (err) {
