@@ -1,3 +1,13 @@
+
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
+
+[npm-downloads-image]: https://badgen.net/npm/dy/bcrypt-inzi
+[npm-url]: https://npmjs.org/package/bcrypt-inzi
+[npm-version-image]: https://badgen.net/npm/v/bcrypt-inzi
+
+
+
 # What is Bcrypt:
 bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher 
 
@@ -72,3 +82,7 @@ bcrypt.validateHash("$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9m
 })
 
 ```
+
+
+M.Inzamam Malik,
+malikasinger@gmail.com
