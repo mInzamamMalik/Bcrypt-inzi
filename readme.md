@@ -83,6 +83,6 @@ bcrypt.validateHash("$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9m
 
 ```
 
-
-M.Inzamam Malik,
+<br>
+M.Inzamam Malik,<br>
 malikasinger@gmail.com
