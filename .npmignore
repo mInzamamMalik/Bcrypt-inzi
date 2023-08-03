@@ -1,1 +1,12 @@
+# these files will not be part of npm package
 /example-code
+.DS_Store
+/test
+*.ts
+**/node_modules/
+README.md
+tsconfig.json
+bin
+build/
+!build/
+src/
