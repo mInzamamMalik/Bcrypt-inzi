@@ -1,4 +1,4 @@
-var bCrypt = require("./bCrypt");
+var bCrypt = require("../dist/index.js");
 
 var compares = 0;
 var salts = [];

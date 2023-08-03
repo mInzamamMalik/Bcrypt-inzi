@@ -1,5 +1,5 @@
 /*jslint node: true, indent: 4, stupid: true */
-var bCrypt = require("./bCrypt");
+var bCrypt = require("../dist/index.cjs");
 
 console.log("\n\n Salts \n");
 
