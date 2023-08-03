@@ -1,23 +1,19 @@
 import { stringToHash, verifyHash, validateHash } from "../dist/index.js";
 
-stringToHash("pakistan", 10).then((string) => {
-  console.log("hash: ", string);
-});
+(async () => {
+  const hash = await stringToHash("pakistan", 12);
+  console.log("hash: ", hash);
+})();
 
-verifyHash(
+const result = await verifyHash(
   "pakistan",
   "$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9mW"
-)
-  .then((result) => {
-    if (result) {
-      console.log("hash matched");
-    } else {
-      console.log("hash not matched");
-    }
-  })
-  .catch((e) => {
-    console.log("error: ", e);
-  });
+);
+if (result) {
+  console.log("hash matched");
+} else {
+  console.log("hash not matched");
+}
 
 verifyHash(
   "someOther",
@@ -34,16 +30,14 @@ verifyHash(
     console.log("error: ", e);
   });
 
-validateHash(
+const result2 = await validateHash(
   "$2b$10$qkxhZpDlwU15DhEXOzjeYeRinfmQ/Txjhtg31x.dmg84oop4cq2Zm"
-).then((result) => {
-  console.log("result",result);
-  if (result) {
-    console.log("hash is valid");
-  } else {
-    console.log("hash is invalid");
-  }
-});
+);
+if (result2) {
+  console.log("hash is valid");
+} else {
+  console.log("hash is invalid");
+}
 
 validateHash(
   "$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9m"
@@ -54,3 +48,4 @@ validateHash(
     console.log("hash is invalid");
   }
 });
+

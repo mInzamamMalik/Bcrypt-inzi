@@ -7,9 +7,11 @@
 
 # What is Bcrypt
 
-bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher
+Bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher
 
-it is ideal for convert password into hash when saving in database, Besides incorporating a salt to protect against **Rainbow table attacks**, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to **brute-force search attacks** even with increasing computation power.
+It is ideal for convert password into hash when saving in database, Besides incorporating a salt to protect against **Rainbow table attacks**, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to **brute-force search attacks** even with increasing computation power.
+
+This library makes it easier to use Bcrypt in NodeJS
 
 ## Installation
 
@@ -20,36 +22,20 @@ npm i bcrypt-inzi
 ## ES6 Usage
 
 ```js
-import { stringToHash, varifyHash, validateHash } from "bcrypt-inzi";
+import { stringToHash, verifyHash, validateHash } from "bcrypt-inzi";
 
-stringToHash("pakistan").then((string) => {
-  console.log("hash: ", string);
-});
+const hash = await stringToHash("pakistan", 10);
+console.log("hash: ", hash);
 
-varifyHash(
+const result = await verifyHash(
   "pakistan",
   "$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9mW"
-)
-  .then((result) => {
-    if (result) {
-      console.log("matched");
-    } else {
-      console.log("not matched");
-    }
-  })
-  .catch((e) => {
-    console.log("error: ", e);
-  });
-
-validateHash(
-  "$2a$10$W3/bbpG0rexRwKBabxbp7efehubSnxDLM7OCEj0MEPAac98EUa9mW"
-).then((result) => {
-  if (result) {
-    console.log("hash is valid");
-  } else {
-    console.log("hash is invalid");
-  }
-});
+);
+if (result) {
+  console.log("hash matched");
+} else {
+  console.log("hash not matched");
+}
 ```
 
 ## ES5 Usage:
@@ -89,5 +75,8 @@ bcrypt
 ```
 
 <br>
-M.Inzamam Malik,<br>
-malikasinger@gmail.com
+
+|             |                                                                          |
+| ----------- | ------------------------------------------------------------------------ |
+| Author      | M.Inzamam Malik, [malikasinger@gmail.com](mailto:malikasinger@gmail.com) |
+| Contributor | [Shehzad Iqbal](https://github.com/shehza-d)                             |

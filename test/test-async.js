@@ -1,12 +1,12 @@
-var bCrypt = require("../dist/index.js");
+import { genSalt, hash, compare } from "../dist/index.js";
 
 var compares = 0;
 var salts = [];
 var hashes = [];
 
 console.log("\n\n Salts \n");
-bCrypt.genSalt(8, saltCallback);
-bCrypt.genSalt(10, saltCallback);
+genSalt(8, saltCallback);
+genSalt(10, saltCallback);
 
 function saltCallback(error, result) {
   if (!error) {
@@ -22,8 +22,8 @@ function saltCallback(error, result) {
 }
 
 function createHash(salt) {
-  bCrypt.hash("bacon", salt, null, hashCallback);
-  bCrypt.hash("bacon", salt, null, hashCallback);
+  hash("bacon", salt, null, hashCallback);
+  hash("bacon", salt, null, hashCallback);
 }
 
 function hashCallback(error, result) {
@@ -43,10 +43,10 @@ function hashCallback(error, result) {
 }
 
 function startCompares(string, callback) {
-  bCrypt.compare(string, hashes[0], callback);
-  bCrypt.compare(string, hashes[1], callback);
-  bCrypt.compare(string, hashes[2], callback);
-  bCrypt.compare(string, hashes[3], callback);
+  compare(string, hashes[0], callback);
+  compare(string, hashes[1], callback);
+  compare(string, hashes[2], callback);
+  compare(string, hashes[3], callback);
 }
 
 function trueCompareCallback(error, result) {
