@@ -2,4 +2,4 @@ declare const stringToHash: (PasswordString: string, saltRounds?: number) => Pro
 declare const verifyHash: (realPassword: string, hashString: string) => Promise<boolean>;
 declare const validateHash: (hashString: string) => Promise<boolean>;
 
-export { stringToHash, validateHash, verifyHash as varifyHash, verifyHash };
+export { stringToHash, validateHash, verifyHash };
