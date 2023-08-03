@@ -5,7 +5,6 @@
 *.ts
 **/node_modules/
 README.md
-tsconfig.json
 bin
 build/
 !build/
