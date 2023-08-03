@@ -1,20 +1,32 @@
 {
   "name": "bcrypt-inzi",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "this is simple lib for string to hash and compare string and hash",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Inzamam Malik (malikasinger)",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3"
+    "bcrypt": "^5.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "@types/bcrypt": "^5.0.0",
+    "typescript": "^5.1.6"
+  },
+  "contributors": [
+    "Shehzad Iqbal <> (https://github.com/shehza-d)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malikasinger1/Bcrypt-inzi.git"
+    "url": "git+https://github.com/mInzamamMalik/Bcrypt-inzi.git"
   },
   "keywords": [
     "bcrypt",
@@ -24,7 +36,7 @@
     "nodejs"
   ],
   "bugs": {
-    "url": "https://github.com/malikasinger1/Bcrypt-inzi/issues"
+    "url": "https://github.com/mInzamamMalik/Bcrypt-inzi/issues"
   },
-  "homepage": "https://github.com/malikasinger1/Bcrypt-inzi#readme"
+  "homepage": "https://github.com/mInzamamMalik/Bcrypt-inzi#readme"
 }
