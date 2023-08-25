@@ -1,0 +1,12 @@
+# these files will not be part of npm package
+/example-code
+.DS_Store
+/test
+index.ts
+**/node_modules/
+README.md
+bin
+build/
+!build/
+src/
+jest.config.js
