@@ -1,8 +1,14 @@
+
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
 
+TODO: add test passing badge like this ->
+[![ci](https://github.com/kelektiv/node.bcrypt.js/actions/workflows/ci.yaml/badge.svg)](https://github.com/kelektiv/node.bcrypt.js/actions/workflows/ci.yaml)
+
+
 [npm-downloads-image]: https://badgen.net/npm/dy/bcrypt-inzi
 [npm-url]: https://npmjs.org/package/bcrypt-inzi
+[github-url]: https://npmjs.org/package/bcrypt-inzi
 [npm-version-image]: https://badgen.net/npm/v/bcrypt-inzi
 
 # What is Bcrypt
